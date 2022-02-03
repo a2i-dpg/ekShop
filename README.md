@@ -126,7 +126,7 @@ sudo systemctl restart apache2
 ## Install Project using Git
 
 ```shell
-    git clone https://github.com/dp4pm/marketplace.git
+    git clone https://github.com/a2i-dpg/ekShop.git
     cp .env.example .env
     import database (find DB in database folder)
     composer update
