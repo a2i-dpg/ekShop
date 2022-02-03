@@ -43,6 +43,7 @@ class SellerController extends Controller
             $sellers = $sellers->where('verification_status', $approved);
         }
         $sellers = $sellers->paginate(15);
+        
         return view('admin.sellers.index', compact('sellers', 'sort_search', 'approved'));
     }
 
