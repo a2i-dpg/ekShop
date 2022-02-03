@@ -30,11 +30,11 @@ Our platform is open to modifications by developers by its open source nature. W
 
 
 # Features
-- [Merchant Features](https://github.com/a2i-dpg/ekShop-doc/merchant/MerchantFeatures.md)
-- [Admin Features](https://github.com/a2i-dpg/ekShop-doc/admin/AdminFeature.md)
-- [Marketing Features](https://github.com/a2i-dpg/ekShop-doc/admin/MarketingFeature.md)
-- [Product Features](https://github.com/a2i-dpg/ekShop-doc/admin/ProductFeature.md)
-- [Merchant Management](https://github.com/a2i-dpg/ekShop-doc/admin/SellerFeature.md)
+- [Merchant Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/merchant/MerchantFeatures.md)
+- [Admin Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/AdminFeature.md)
+- [Marketing Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/MarketingFeature.md)
+- [Product Features](https://github.com/a2i-dpg/ekShop-doc//blob/masteradmin/ProductFeature.md)
+- [Merchant Management](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/SellerFeature.md)
 
 
 # Requirements
