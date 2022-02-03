@@ -1,4 +1,4 @@
-# Marketplace
+# ekShop (Marketplace)
 
 - [About](#about-dpg-marketplace)
 - [Features](#features)
@@ -9,7 +9,7 @@
 - [Install Project using Git](#install-project-using-git)
 
 # About
-Marketplace is a fully open-source eCommerce platform that is customizable and configurable to your needs. It is completely free, adaptable and open to be supported by a worldwide community of volunteers and contributors. It’s free and open source nature allows users to maintain complete control of the data content and modify it as they wish and according to their needs. Our intended goal is to allow any potential entrepreneur to quickly get up and running with an online platform to sell goods online. 
+ekShop is a fully open-source eCommerce platform that is customizable and configurable to your needs. It is completely free, adaptable and open to be supported by a worldwide community of volunteers and contributors. It’s free and open source nature allows users to maintain complete control of the data content and modify it as they wish and according to their needs. Our intended goal is to allow any potential entrepreneur to quickly get up and running with an online platform to sell goods online. 
 Some key features of Marketplace include:
 
 
@@ -30,11 +30,11 @@ Our platform is open to modifications by developers by its open source nature. W
 
 
 # Features
-- [Merchant Features](docs//merchant/MerchantFeatures.md)
-- [Admin Features](docs/admin/AdminFeature.md)
-- [Marketing Features](docs/admin/MarketingFeature.md)
-- [Product Features](docs/admin/ProductFeature.md)
-- [Merchant Management](docs/admin/SellerFeature.md)
+- [Merchant Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/merchant/MerchantFeatures.md)
+- [Admin Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/AdminFeature.md)
+- [Marketing Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/MarketingFeature.md)
+- [Product Features](https://github.com/a2i-dpg/ekShop-doc//blob/masteradmin/ProductFeature.md)
+- [Checkout Process](https://github.com/a2i-dpg/ekShop-doc/blob/master/marketplace/CheckoutProcess.md)
 
 
 # Requirements
@@ -126,7 +126,7 @@ sudo systemctl restart apache2
 ## Install Project using Git
 
 ```shell
-    git clone https://github.com/dp4pm/marketplace.git
+    git clone https://github.com/a2i-dpg/ekShop.git
     cp .env.example .env
     import database (find DB in database folder)
     composer update
@@ -148,3 +148,18 @@ Password: 123456
 #Login as a Seller
 Username: seller@example.com
 Password: 123456
+
+### Licensing & Copyright
+Copyright 2022 @a2i, Bangladesh
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
