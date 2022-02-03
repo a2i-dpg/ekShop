@@ -1,4 +1,4 @@
-# Marketplace
+# ekShop (Marketplace)
 
 - [About](#about-dpg-marketplace)
 - [Features](#features)
@@ -9,7 +9,7 @@
 - [Install Project using Git](#install-project-using-git)
 
 # About
-Marketplace is a fully open-source eCommerce platform that is customizable and configurable to your needs. It is completely free, adaptable and open to be supported by a worldwide community of volunteers and contributors. It’s free and open source nature allows users to maintain complete control of the data content and modify it as they wish and according to their needs. Our intended goal is to allow any potential entrepreneur to quickly get up and running with an online platform to sell goods online. 
+ekShop is a fully open-source eCommerce platform that is customizable and configurable to your needs. It is completely free, adaptable and open to be supported by a worldwide community of volunteers and contributors. It’s free and open source nature allows users to maintain complete control of the data content and modify it as they wish and according to their needs. Our intended goal is to allow any potential entrepreneur to quickly get up and running with an online platform to sell goods online. 
 Some key features of Marketplace include:
 
 
