@@ -34,7 +34,7 @@ Our platform is open to modifications by developers by its open source nature. W
 - [Admin Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/AdminFeature.md)
 - [Marketing Features](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/MarketingFeature.md)
 - [Product Features](https://github.com/a2i-dpg/ekShop-doc//blob/masteradmin/ProductFeature.md)
-- [Merchant Management](https://github.com/a2i-dpg/ekShop-doc/blob/master/admin/SellerFeature.md)
+- [Checkout Process](https://github.com/a2i-dpg/ekShop-doc/blob/master/marketplace/CheckoutProcess.md)
 
 
 # Requirements
