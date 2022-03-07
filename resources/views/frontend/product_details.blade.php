@@ -685,13 +685,22 @@
                                                 <div class="">
                                                     <a href="{{ route('product', $related_product->slug) }}" class="d-block">
                                                         <div class="product-img-inner">
-                                                            <img
+                                                            {{-- <img
                                                                 class="img-fit lazyloaded"
                                                                 src="{{ static_asset('assets/img/placeholder.jpg') }}"
                                                                 data-src="{{ uploaded_asset($related_product->thumbnail_img) }}"
                                                                 alt="{{ $related_product->getTranslation('name') }}"
                                                                 onerror="this.onerror=null;this.src='{{ static_asset('assets/img/placeholder.jpg') }}';"
+                                                            > --}}
+                                                            <img
+                                                            class="img lazyload rounded"
+                                                            src="{{ static_asset('assets/img/placeholder.jpg') }}"
+                                                            data-src="{{ uploaded_asset($related_product->thumbnail_img) }}"
+                                                            alt="{{ $related_product->getTranslation('name') }}"
+                                                            onerror="this.onerror=null;this.src='{{ static_asset('assets/img/placeholder.jpg') }}';"
                                                             >
+
+
                                                         </div>
                                                     </a>
                                                 </div>
@@ -738,6 +747,57 @@
                                 </h3>
                                 <a href="javascript:void(0)" class="ml-auto mr-0 bg-white text-primary fs-16 fw-500">{{ translate('View All') }}</a> <i class="las la-angle-right"></i>
                             </div>
+
+                            <!-- Div Start -->
+                            {{-- <div class="">
+                                <div class="plx-carousel gutters-5 half-outside-arrow" data-items="5" data-xl-items="5" data-lg-items="4"  data-md-items="3" data-sm-items="2" data-xs-items="2" data-xxs-items="1" data-arrows='true' data-infinite='true'>
+                                    @foreach (filter_products(\App\Models\Product::where('user_id', $detailedProduct->user_id)->orderBy('num_of_sale', 'desc'))->limit(6)->get() as $key => $top_product)
+                                        <div class="carousel-box">
+                                            <div class="plx-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+                                                <div class="">
+                                                    <a href="{{ route('product', $top_product->slug) }}" class="bg-white d-block text-reset rounded p-2 hov-shadow-md mb-2">
+                                                        <div class="product-img-inner">
+                                                            <img
+                                                            class="img lazyload rounded"
+                                                            src="{{ static_asset('assets/img/placeholder.jpg') }}"
+                                                            data-src="{{ uploaded_asset($top_product->thumbnail_img) }}"
+                                                            alt="{{ $top_product->getTranslation('name') }}"
+                                                            onerror="this.onerror=null;this.src='{{ static_asset('assets/img/placeholder.jpg') }}';"
+                                                            >
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="category-product-body-area text-center">
+                                                    <div class="category-product-amount">
+                                                        @if(home_base_price($top_product) != home_discounted_base_price($top_product))
+                                                            <del class="fw-600 opacity-50 mr-1 text-muted">{{ home_base_price($top_product) }}</del>
+                                                        @endif
+                                                        <span class="fw-700 text-primary">{{ home_discounted_base_price($top_product) }}</span>
+                                                    </div>
+                                                    <h3 class="mb-0 category-product-name">
+                                                        <a href="{{ route('product', $top_product->slug) }}" class="d-block text-3d3d3d fw-600">{{ $top_product->getTranslation('name') }}</a>
+                                                    </h3>
+                                                    <div class="rating rating-sm mt-1 top-10-selling-rating text-center">
+                                                        By <span class="text-primary">Dpg</span> {{ renderStarRating($top_product->rating) }}
+                                                    </div>
+                                                    <a href="javascript:void(0)" onclick="showAddToCartModal({{ $top_product->id }})" class="btn btn-primary text-white border-primary btn-sm text-center fs-16 mt-3">
+                                                        <i class="las la-shopping-cart"></i> {{ translate('Add to Cart') }}
+                                                    </a>
+                                                    @if (addon_is_activated('club_point'))
+                                                        <div class="rounded px-2 mt-2 bg-soft-primary border-soft-primary border">
+                                                            {{ translate('Club Point') }}:
+                                                            <span class="fw-700 float-right">{{ $top_product->earn_point }}</span>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div> --}}
+                            <!-- Div End -->
+
+
                             <div class="row mt-3">
                                 @foreach (filter_products(\App\Models\Product::where('user_id', $detailedProduct->user_id)->orderBy('num_of_sale', 'desc'))->limit(6)->get() as $key => $top_product)
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
@@ -769,9 +829,12 @@
                                                     </div>
                                                 </div>
                                             </a>
+                                        </div>
                                     </div>
                                 @endforeach
                             </div>
+
+
                         </div>
                     </div>
                 </div>
