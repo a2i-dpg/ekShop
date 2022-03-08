@@ -10,6 +10,7 @@ use Mail;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\OrderNotification;
 use App\Models\FirebaseNotification;
+use App\Events\CartEmailEvent;
 
 class NotificationUtility
 {
@@ -40,16 +41,18 @@ class NotificationUtility
 
         //sends email to customer with the invoice pdf attached
         if (env('MAIL_USERNAME') != null) {
-            $array['view'] = 'emails.invoice';
-            $array['subject'] = translate('Your order has been placed') . ' - ' . $order->code;
-            $array['from'] = env('MAIL_FROM_ADDRESS');
-            $array['order'] = $order;
-            try {
-                Mail::to($order->user->email)->queue(new InvoiceEmailManager($array));
-                Mail::to(User::where('user_type', 'admin')->first()->email)->queue(new InvoiceEmailManager($array));
-            } catch (\Exception $e) {
+            // $array['view'] = 'emails.invoice';
+            // $array['subject'] = translate('Your order has been placed') . ' - ' . $order->code;
+            // $array['from'] = env('MAIL_FROM_ADDRESS');
+            // $array['order'] = $order;
+            // try {
+            //     Mail::to($order->user->email)->queue(new InvoiceEmailManager($array));
+            //     Mail::to(User::where('user_type', 'admin')->first()->email)->queue(new InvoiceEmailManager($array));
 
-            }
+            // } catch (\Exception $e) {
+
+            // }
+            event(new CartEmailEvent($order));
         }
     }
 
