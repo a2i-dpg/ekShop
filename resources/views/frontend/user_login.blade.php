@@ -382,17 +382,6 @@
                                         </div>
                                     @endif
 
-                                    <div class="separator mb-3">
-                                        <span class="user-separate-text px-3 text-primary fs-16">{{ translate('Or Login With')}}</span>
-                                    </div>
-
-                                    <ul class="list-inline text-center mb-5">
-                                        @if (true /*get_setting('identity_server_login') == 1*/)
-                                            <a href="{{ route('user.identity-server-login') }}" class="btn btn-info btn-sm"  style="font-size: 20px; border-radius: 10px ">
-                                                Login With Identity
-                                            </a>
-                                        @endif
-                                    </ul>
 
                                     @if(get_setting('google_login') == 1 || get_setting('facebook_login') == 1 || get_setting('twitter_login') == 1)
                                         <div class="separator mb-3">

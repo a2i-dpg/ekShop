@@ -153,7 +153,7 @@
                         </li>
                     @endauth
                     @if(get_setting('show_language_switcher') == 'on')
-                        <li class="list-inline-item mr-3 border-right border-left-0 pr-3 pl-0 d-none d-sm-block" id="lang-change">
+                        <li class="list-inline-item mr-3 border-right border-left-0 pr-3 pl-0 d-none d-sm-block dropdown" id="lang-change">
                             @php
                                 if(Session::has('locale')){
                                     $locale = Session::get('locale', Config::get('app.locale'));

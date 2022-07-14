@@ -112,10 +112,12 @@
                                                                 </div>
                                                             </div>
                                                             <div class="deals-of-the-day-details-amount d-flex justify-content-between align-items-center">
-                                                                <span class="fw-700 text-primary fs-14 mt-2">{{ home_discounted_base_price($product) }}</span>
-                                                                @if(home_base_price($product) != home_discounted_base_price($product))
-                                                                    <del class="d-block opacity-70 text-muted fs-14 mt-2">{{ home_base_price($product) }}</del>
-                                                                @endif
+                                                                <p>
+                                                                    <span class="fw-700 text-primary fs-14 mt-2">{{ home_discounted_base_price($product) }}</span>
+                                                                    @if(home_base_price($product) != home_discounted_base_price($product))
+                                                                        <del class="d-block opacity-70 text-muted fs-14 mt-2">{{ home_base_price($product) }}</del>
+                                                                    @endif
+                                                                </p>
                                                                 <a href="javascript:void(0)" onclick="showAddToCartModal({{ $product->id }})"
                                                                    class="btn text-white btn-primary border-primary btn-sm text-center fs-16 mt-3">
                                                                     <i class="las la-shopping-cart"></i> {{ translate('Add to Cart') }}

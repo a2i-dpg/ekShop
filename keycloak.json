@@ -1,8 +1,0 @@
-{
-    "realm": "dp4pm",
-    "auth-server-url": "https://id.dpg.gov.bd/auth/",
-    "ssl-required": "none",
-    "resource": "marketplace",
-    "public-client": true,
-    "confidential-port": 0
-}
