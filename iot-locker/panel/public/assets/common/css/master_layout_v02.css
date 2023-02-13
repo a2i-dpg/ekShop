@@ -1,0 +1,251 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+strong,
+button,
+body {
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+
+.dt-buttons {
+    column-gap: 5px;
+    padding-top: 15px
+}
+
+.dt-buttons button {
+    padding: 5px 12px !important;
+    background: blueviolet !important;
+    color: #fff !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.location-highlight {
+    font-weight: 800;
+    color: rgb(0, 0, 65);
+}
+
+/* Copy From CSS */
+td {
+    vertical-align: middle !important;
+}
+
+.navbar-custom {
+    background: #fff;
+}
+
+.button-menu-mobile.waves-effect.waves-light,
+.navbar-custom .topnav-menu .nav-link {
+    color: #111;
+}
+
+.navbar-custom .app-search .form-control,
+.navbar-custom .app-search .btn {
+    background: rgba(0, 0, 0, 0.4)
+}
+
+.singleBox:hover {
+    background: rgb(238, 250, 252) !important;
+}
+
+[x-cloak] {
+    display: none;
+}
+
+
+#user_role option {
+    text-transform: capitalize;
+}
+
+
+/* add images */
+.location_select {
+    /* width: 50%; */
+}
+
+.required {
+    border: 1px solid red;
+}
+
+.assets_image {
+    width: 150px;
+    /* height: 150px; */
+}
+
+.btn_asset_submit {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Connect to delivery */
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* .rider_search{
+    margin-top: 20px;
+} */
+.all-check {
+    font-size: 10px;
+}
+
+.selectRow {
+    cursor: pointer;
+}
+
+#deliveryManList tbody tr:hover {
+    background-color: antiquewhite !important;
+}
+
+.hr_with_no_margin {
+    margin: 0;
+}
+
+
+/* Company- Report Style */
+.dates {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dates .btn {
+    margin-top: 16px;
+}
+
+.copiable {
+    cursor: pointer;
+    border: 1px dotted gray;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/* report page-start */
+
+
+.booked_numbers {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* .booked_numbers p{
+    flex-wrap: wrap;
+} */
+
+.booked_number {
+    color: #fff;
+    background-color: #F32424;
+    border-color: #F32424;
+}
+
+.collected_number {
+    color: #fff;
+    background-color: #6658dd;
+    border-color: #6658dd;
+}
+
+.not_collected_number {
+    color: #fff;
+    background-color: #f57f02;
+    border-color: #f57f02;
+}
+
+.number_badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    /* font-size: 75%; */
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+/* report page-end */
+
+
+/* admin-locker:start */
+.add_locker .form-control {
+    text-transform: capitalize;
+}
+.add_locker .form-select {
+    text-transform: capitalize;
+}
+.readonly{
+    background-color: #c8c8c8 !important;
+    cursor: no-drop;
+}
+/* admin-locker:end */
+
+
+
+
+
+/* Responsive */
+/* Activities: filter container Media Query For tab & Mobile*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* Report Page */
+    .mobile-mt-1 {
+        margin-top: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    /* Report Page */
+    .mobile-mt-1 {
+        margin-top: 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* Report Page */
+    .mobile-mt-1 {
+        margin-top: 0;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* Report Page */
+    .mobile-mt-1 {
+        margin-top: 0;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* Report Page */
+    .mobile-mt-1 {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,82 @@
+/* Activities: filter container Media Query For tab & Mobile*/
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .filter_container {
+        display: none !important;
+    }
+
+    .logs_filter_container_for_mobile {
+        display: flex !important;
+    }
+
+    .location_list {
+        display: none;
+    }
+
+    .location_list_show {
+        display: block;
+        z-index: 100;
+    }
+
+    .tabs_table {
+        width: 100%;
+    }
+
+    .col {
+        /* width: 90% !important; */
+        /* margin-left: 4% !important; */
+        font-size: 12px;
+    }
+
+    .location_filter_icon {
+        display: block !important;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 16px;
+    }
+
+    .only_mobile {
+        display: block !important;
+    }
+
+    .not_mobile-inline{
+        display: none !important;
+    }
+
+
+    /* New Code for responsive */
+    /* Login Page */
+    .account-pages {
+        min-height: 80vh !important;
+    }
+
+    /* Dashboard */
+    body[data-sidebar-size="condensed"] .content-page {
+        margin-left: 0px !important;
+    }
+
+    /* Location */
+    .location_grid {
+        width: 100vw;
+    }
+    .singleBox {
+        width: 70%;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
