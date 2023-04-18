@@ -197,7 +197,7 @@ composer -v
     git clone https://github.com/a2i-dpg/ekShop.git
     cp .env.example .env
     import database (find DB in database folder)
-    composer update
+    composer install
     php artisan storage:link
     php artisan key:generate
     php artisan passport:install --force
