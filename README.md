@@ -215,7 +215,7 @@ or
 
 #Login as an Admin
 Username: admin@admin.com
-Password: 123456
+Password: ekShop@dpg
 
 #Login as a Customer
 Username: customer@example.com
