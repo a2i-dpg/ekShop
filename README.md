@@ -10,8 +10,8 @@ This repo is functionality complete — PRs and issues welcome!
 - [Requirements](#requirements)
 - [Easy Installation](#easy-installation)
 - [Server Setup](#server-setup)
-    - [Linux Server Setup For Project Deployment](#linux-server-setup-for-project-deployment)
-    - [Windows Server Setup For Project Local Deployment](#windows-server-setup-for-project-local-deployment)
+    - [Linux Server Setup For Production Deployment](#linux-server-setup-for-production-deployment)
+    - [Windows Server Setup For Local Deployment](#windows-server-setup-for-local-deployment)
 - [Install Project using Git](#install-project-using-git)
 
 # About
@@ -57,7 +57,7 @@ or
 
 ## Server Setup
 
-## Linux Server Setup For Project Deployment
+## Linux Server Setup For Production Deployment
 
 <hr /> <br />
 
@@ -164,7 +164,7 @@ sudo systemctl restart apache2
 ```
 
 
-## Windows Server Setup For Project Local Deployment
+## Windows Server Setup For Local Deployment
 <hr /> <br />
 
 
@@ -197,7 +197,7 @@ composer -v
     git clone https://github.com/a2i-dpg/ekShop.git
     cp .env.example .env
     import database (find DB in database folder)
-    composer update
+    composer install
     php artisan storage:link
     php artisan key:generate
     php artisan passport:install --force
