@@ -27,6 +27,7 @@ class WalletController extends Controller
 
         // dd($data);
 
+
         $request->session()->put('payment_type', 'wallet_payment');
         $request->session()->put('payment_data', $data);
 
@@ -58,6 +59,7 @@ class WalletController extends Controller
         $wallet->payment_details = $payment_details;
         $wallet->save();
 
+
         Session::forget('payment_data');
         Session::forget('payment_type');
 
@@ -78,6 +80,7 @@ class WalletController extends Controller
         $wallet->save();
         flash(translate('Offline Recharge has been done. Please wait for response.'))->success();
         return redirect()->route('wallet.index');
+
     }
 
     public function offline_recharge_request()
@@ -102,6 +105,7 @@ class WalletController extends Controller
         if ($wallet->save()) {
             return 1;
         }
+        
         return 0;
     }
 }

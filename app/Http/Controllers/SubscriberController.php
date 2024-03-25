@@ -37,13 +37,12 @@ class SubscriberController extends Controller
     public function store(Request $request)
     {
         $subscriber = Subscriber::where('email', $request->email)->first();
-        if($subscriber == null){
+        if ($subscriber == null) {
             $subscriber = new Subscriber;
             $subscriber->email = $request->email;
             $subscriber->save();
             flash(translate('You have subscribed successfully'))->success();
-        }
-        else{
+        } else {
             flash(translate('You are  already a subscriber'))->success();
         }
         return back();

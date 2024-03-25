@@ -19,8 +19,11 @@ use App\Http\Controllers\CommissionController;
 use App\Utility\SendSMSUtility;
 use App\Utility\NotificationUtility;
 
+
+
+
 //sensSMS function for OTP
-if (!function_exists('sendSMS')) {
+if (!function_exists('sendSMS')) { 
     function sendSMS($to, $from, $text, $template_id)
     {
         return SendSMSUtility::sendSMS($to, $from, $text, $template_id);
@@ -39,6 +42,7 @@ if (!function_exists('areActiveRoutes')) {
 
 //highlights the selected navigation on frontend
 if (!function_exists('areActiveRoutesHome')) {
+
     function areActiveRoutesHome(array $routes, $output = "active")
     {
         foreach ($routes as $route) {
@@ -839,6 +843,8 @@ if (!function_exists('purchase_payment_done')) {
 if (!function_exists('calculateCommissionAffilationClubPoint')) {
     function calculateCommissionAffilationClubPoint($order)
     {
+
+
         (new CommissionController)->calculateCommission($order);
 
         if (addon_is_activated('affiliate_system')) {
@@ -863,6 +869,8 @@ if (!function_exists('addon_is_activated')) {
         $addons = Cache::remember('addons', 86400, function () {
             return Addon::all();
         });
+
+        
 
         $activation = $addons->where('unique_identifier', $identifier)->where('activated', 1)->first();
         return $activation == null ? false : true;

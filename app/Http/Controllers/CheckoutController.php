@@ -33,6 +33,7 @@ class CheckoutController extends Controller
         if ($request->payment_option != null) {
             (new OrderController)->store($request);
 
+
             $request->session()->put('payment_type', 'cart_payment');
 
             if ($request->session()->get('combined_order_id') != null) {
@@ -52,6 +53,8 @@ class CheckoutController extends Controller
                     flash(translate("Your order has been placed successfully"))->success();
                     return redirect()->route('order_confirmed');
                 } elseif ($request->payment_option == 'wallet') {
+                    
+                    
                     $user = Auth::user();
                     $combined_order = CombinedOrder::findOrFail($request->session()->get('combined_order_id'));
                     if ($user->balance >= $combined_order->grand_total) {
@@ -70,6 +73,7 @@ class CheckoutController extends Controller
                 }
             }
         } else {
+
             flash(translate('Select Payment Option.'))->warning();
             return back();
         }
@@ -86,6 +90,7 @@ class CheckoutController extends Controller
             $order->payment_details = $payment;
             $order->save();
 
+            
             calculateCommissionAffilationClubPoint($order);
         }
 

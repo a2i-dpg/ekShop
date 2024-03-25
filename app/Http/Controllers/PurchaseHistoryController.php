@@ -24,14 +24,14 @@ class PurchaseHistoryController extends Controller
     public function digital_index()
     {
         $orders = DB::table('orders')
-                        ->orderBy('code', 'desc')
-                        ->join('order_details', 'orders.id', '=', 'order_details.order_id')
-                        ->join('products', 'order_details.product_id', '=', 'products.id')
-                        ->where('orders.user_id', Auth::user()->id)
-                        ->where('products.digital', '1')
-                        ->where('order_details.payment_status', 'paid')
-                        ->select('order_details.id')
-                        ->paginate(15);
+            ->orderBy('code', 'desc')
+            ->join('order_details', 'orders.id', '=', 'order_details.order_id')
+            ->join('products', 'order_details.product_id', '=', 'products.id')
+            ->where('orders.user_id', Auth::user()->id)
+            ->where('products.digital', '1')
+            ->where('order_details.payment_status', 'paid')
+            ->select('order_details.id')
+            ->paginate(15);
         return view('frontend.user.digital_purchase_history', compact('orders'));
     }
 

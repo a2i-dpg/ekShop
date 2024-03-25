@@ -12,7 +12,7 @@ class TestController extends Controller
             "amount"        => "9701.84",
             "end_datetime"  => "2021-12-31",
             "custom_fields" => [
-              "invoice" => "2018/0333"
+                "invoice" => "2018/0333"
             ]
         ];
 
@@ -137,5 +137,4 @@ class TestController extends Controller
 
         curl_close($curl);
     }
-
 }

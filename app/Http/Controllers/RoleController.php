@@ -37,7 +37,7 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->has('permissions')){
+        if ($request->has('permissions')) {
             $role = new Role;
             $role->name = $request->name;
             $role->permissions = json_encode($request->permissions);
@@ -52,7 +52,6 @@ class RoleController extends Controller
         }
         flash(translate('Something went wrong'))->error();
         return back();
-
     }
 
     /**
@@ -76,7 +75,7 @@ class RoleController extends Controller
     {
         $lang = $request->lang;
         $role = Role::findOrFail($id);
-        return view('admin.staff.staff_roles.edit', compact('role','lang'));
+        return view('admin.staff.staff_roles.edit', compact('role', 'lang'));
     }
 
     /**
@@ -90,8 +89,8 @@ class RoleController extends Controller
     {
         $role = Role::findOrFail($id);
 
-        if($request->has('permissions')){
-            if($request->lang == env("DEFAULT_LANGUAGE")){
+        if ($request->has('permissions')) {
+            if ($request->lang == env("DEFAULT_LANGUAGE")) {
                 $role->name = $request->name;
             }
             $role->permissions = json_encode($request->permissions);

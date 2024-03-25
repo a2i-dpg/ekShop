@@ -28,6 +28,8 @@ class AdminController extends Controller
                 $category_ids = \App\Utility\CategoryUtility::children_ids($category->id);
                 $category_ids[] = $category->id;
 
+
+
                 $products = Product::with('stocks')->whereIn('category_id', $category_ids)->get();
                 $qty = 0;
                 $sale = 0;
@@ -49,6 +51,8 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('root_categories', 'cached_graph_data'));
     }
 
+
+    
     function clearCache(Request $request)
     {
         Artisan::call('cache:clear');
