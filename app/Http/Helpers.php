@@ -696,7 +696,8 @@ if (!function_exists('get_setting')) {
 
 function hex2rgba($color, $opacity = false)
 {
-    return Colorcodeconverter::convertHexToRgba($color, $opacity);
+    return "Helpers.php > hex2rgba()";
+    // return Colorcodeconverter::convertHexToRgba($color, $opacity);
 }
 
 if (!function_exists('isAdmin')) {

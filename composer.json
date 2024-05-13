@@ -5,8 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^8.0",
-        "laravel/framework": "^8.0",
+        "php": "^8",
         "authorizenet/authorizenet": "^2.0",
         "barryvdh/laravel-ide-helper": "^2.10",
         "fideloper/proxy": "^4.0",
@@ -15,15 +14,13 @@
         "intervention/image": "^2.5",
         "kingflamez/laravelrave": "^4.2",
         "laracasts/flash": "^3.0",
-        "laracon21/colorcodeconverter": "1.2",
-        "laracon21/combinations": "1.2",
-        "laracon21/timezones": "1.2",
-
+        
+        "laravel/framework": "^8.0",
         "laravel/passport": "^10.1",
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
-        "lcobucci/jwt": "^3.4.5",
+        "lcobucci/jwt": "^4.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "maatwebsite/excel": "^3.1",
         "niklasravnsborg/laravel-pdf": "^4.0",
@@ -31,6 +28,8 @@
         "predis/predis": "^1.1",
         "spatie/db-dumper": "2.21.1",
         "twilio/sdk": "^6.1"
+
+        
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
