@@ -194,9 +194,14 @@ composer -v
 ## Install Project using Git
 
 ```shell
+    #1st need to update composer itself
+    composer self-update
+    
     git clone https://github.com/a2i-dpg/ekShop.git
-    cp .env.example .env
+
     import database (find DB in database folder)
+    cp .env.example .env
+    
     composer install
     php artisan storage:link
     php artisan key:generate
