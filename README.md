@@ -46,7 +46,7 @@ Our platform is open to modifications by developers by its open source nature. W
 # Requirements
 - Ubuntu Server
 - Apache 2.4.52
-- PHP 7.3
+- PHP 8
 - Laravel 8.0
 - MySQL 8.0  
 or  
@@ -96,13 +96,13 @@ FLUSH PRIVILEGES;
 quit
 ```
 
-### PHP 7.3 Install
+### PHP 8 Install
 ```shell
-sudo apt -y install php7.3
+sudo apt -y install php8
 
-sudo apt-get install -y php7.3-cli php7.3-json php7.3-common php7.3-mysql php7.3-zip php7.3-gd php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath
+sudo apt-get install -y php8-cli php8-json php8-common php8-mysql php8-zip php8-gd php8-mbstring php8-curl php8-xml php8-bcmath
 
-sudo apt-get install php7.3-mysqli
+sudo apt-get install php8-mysqli
 
 php -v
 ```
@@ -226,7 +226,7 @@ Username: seller@example.com
 Password: 123456
 
 ### Licensing & Copyright
-Copyright 2022 @a2i, Bangladesh
+Copyright 2024 @a2i, Bangladesh
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
