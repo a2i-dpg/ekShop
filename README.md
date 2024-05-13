@@ -209,10 +209,10 @@ composer -v
 ```
 
 ## laragon user configuration
-    - right click on the laragon window:
-        - go to Apache > sites-enabled >  {eksho-dpg.test}.conf =>
-        - remove '/public' from "define ROOT "D:/laragon/www/ekshop-dpg-latest/public"
-        - *Resstart Laragon
+- right click on the laragon window:
+    - go to Apache > sites-enabled >  {eksho-dpg.test}.conf =>
+    - remove '/public' from "define ROOT "D:/laragon/www/ekshop-dpg-latest/public"
+    - *Resstart Laragon
 
 ### Site URL Shoud Be Like
 - http://localhost/project_folder  
