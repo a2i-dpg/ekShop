@@ -1,18 +1,33 @@
-# EKSHOP MARKETPLACE
+# <p align="center"> EKSHOP MARKETPLACE</p> 
 
 > ### ekShop is a fully open-source eCommerce platform that is customizable and configurable to your needs.
 
-This repo is functionality complete — PRs and issues welcome!
+> ##### This repository is functionality complete. Pull requests and issues are welcome!
 ----------
 
-- [About](#about-dpg-marketplace)
+- [ EKSHOP MARKETPLACE](#-ekshop-marketplace)
+- [About](#about)
 - [Features](#features)
 - [Requirements](#requirements)
-- [Easy Installation](#easy-installation)
-- [Server Setup](#server-setup)
-    - [Linux Server Setup For Production Deployment](#linux-server-setup-for-production-deployment)
-    - [Windows Server Setup For Local Deployment](#windows-server-setup-for-local-deployment)
-- [Install Project using Git](#install-project-using-git)
+- [ Easy Installation ](#-easy-installation-)
+  - [Install Project using Git](#install-project-using-git)
+  - [laragon user configuration](#laragon-user-configuration)
+    - [Site URL Shoud Be Like](#site-url-shoud-be-like)
+    - [Default Users](#default-users)
+- [ Server Setup ](#-server-setup-)
+  - [Linux Server Setup For Production Deployment](#linux-server-setup-for-production-deployment)
+      - [install apache server](#install-apache-server)
+      - [checking your Apache configuration for syntax errors:](#checking-your-apache-configuration-for-syntax-errors)
+    - [Install MySQL](#install-mysql)
+    - [PHP 8 Install](#php-8-install)
+    - [Restart Apache](#restart-apache)
+    - [Composer Install](#composer-install)
+    - [Apache Config and  virtual hosts](#apache-config-and--virtual-hosts)
+    - [copy the virtual config](#copy-the-virtual-config)
+  - [Windows Server Setup For Local Deployment](#windows-server-setup-for-local-deployment)
+    - [Composer Install](#composer-install-1)
+    - [Licensing \& Copyright](#licensing--copyright)
+
 
 # About
 ekShop is a fully open-source eCommerce platform that is customizable and configurable to your needs. It is completely free, adaptable and open to be supported by a worldwide community of volunteers and contributors. It’s free and open source nature allows users to maintain complete control of the data content and modify it as they wish and according to their needs. Our intended goal is to allow any potential entrepreneur to quickly get up and running with an online platform to sell goods online. 
@@ -53,9 +68,59 @@ or
 - MariaDB 10.4.22
 
 
-## Easy Installation
+# <p align="center"> Easy Installation </p>
 
-## Server Setup
+## Install Project using Git
+
+```shell
+    #1st need to update composer itself
+    composer self-update
+    
+    git clone https://github.com/a2i-dpg/ekShop.git
+
+    import database (find DB in database folder)
+    cp .env.example .env
+    
+    composer install
+    php artisan storage:link
+    php artisan key:generate
+    php artisan passport:install --force
+```
+
+## laragon user configuration
+- right click on the laragon window:
+    - go to Apache > sites-enabled >  {eksho-dpg.test}.conf =>
+    - remove '/public' from "define ROOT "D:/laragon/www/ekshop-dpg-latest/public"
+    - *Resstart Laragon
+
+### Site URL Shoud Be Like
+- http://localhost/project_folder  
+or
+- http://www.dummy-host.com (FOr Real Domain Address)
+or
+- http://ekshop-dpg.test (For Laragon User)
+
+
+
+
+### Default Users
+
+#Login as an Admin
+Username: admin@admin.com
+Password: 123456
+
+#Login as a Customer
+Username: customer@example.com
+Password: 123456
+
+#Login as a Seller
+Username: seller@example.com
+Password: 123456
+
+
+
+
+# <p align="center"> Server Setup </p>
 
 ## Linux Server Setup For Production Deployment
 
@@ -190,51 +255,6 @@ composer -v
 ```
 
 
-
-## Install Project using Git
-
-```shell
-    #1st need to update composer itself
-    composer self-update
-    
-    git clone https://github.com/a2i-dpg/ekShop.git
-
-    import database (find DB in database folder)
-    cp .env.example .env
-    
-    composer install
-    php artisan storage:link
-    php artisan key:generate
-    php artisan passport:install --force
-```
-
-## laragon user configuration
-- right click on the laragon window:
-    - go to Apache > sites-enabled >  {eksho-dpg.test}.conf =>
-    - remove '/public' from "define ROOT "D:/laragon/www/ekshop-dpg-latest/public"
-    - *Resstart Laragon
-
-### Site URL Shoud Be Like
-- http://localhost/project_folder  
-or
-- http://www.dummy-host.com (Or Real Domain Address)
-
-
-
-
-### Default Users
-
-#Login as an Admin
-Username: admin@admin.com
-Password: 123456
-
-#Login as a Customer
-Username: customer@example.com
-Password: 123456
-
-#Login as a Seller
-Username: seller@example.com
-Password: 123456
 
 ### Licensing & Copyright
 Copyright 2024 @a2i, Bangladesh
