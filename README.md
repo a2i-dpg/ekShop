@@ -26,6 +26,11 @@
     - [copy the virtual config](#copy-the-virtual-config)
   - [Windows Server Setup For Local Deployment](#windows-server-setup-for-local-deployment)
     - [Composer Install](#composer-install-1)
+  - [ Compatibility and Upgrade Information ](#-compatibility-and-upgrade-information-)
+    - [Upgrading to Laravel 8 \& PHP 8](#upgrading-to-laravel-8--php-8)
+    - [System Requirements](#system-requirements)
+    - [Required PHP Extensions](#required-php-extensions)
+          - [Ensure the following PHP extensions are installed and enabled:](#ensure-the-following-php-extensions-are-installed-and-enabled)
     - [Licensing \& Copyright](#licensing--copyright)
 
 
@@ -60,12 +65,12 @@ Our platform is open to modifications by developers by its open source nature. W
 
 # Requirements
 - Ubuntu Server
-- Apache 2.4.52
+- Apache
 - PHP 8
 - Laravel 8.0
-- MySQL 8.0  
+- MySQL 
 or  
-- MariaDB 10.4.22
+- MariaDB
 
 
 # <p align="center"> Easy Installation </p>
@@ -254,6 +259,35 @@ To check composer version run this command into cli
 composer -v
 ```
 
+
+## <p align="center"> Compatibility and Upgrade Information </p>
+
+### Upgrading to Laravel 8 & PHP 8
+This version of ekShop has been upgraded to utilize the features and improvements offered by Laravel 8 and PHP 8. Below are key considerations and steps to ensure compatibility and optimal functionality:
+
+### System Requirements
+- PHP: Version 8.0 or greater.
+- Web Server: Apache or Nginx with PHP 8 support.
+- Database: MySQL 8.0 or MariaDB 10.4.22.
+- Composer: Ensure you have the latest version installed.
+
+### Required PHP Extensions
+###### Ensure the following PHP extensions are installed and enabled:
+
+- json
+- pdo_mysql
+- mbstring
+- curl
+- xml
+- bcmath
+- gd
+- zip
+
+These can typically be installed via your operating system’s package manager. For Ubuntu, you would use:
+
+```shell
+    sudo apt-get install php8.0-json php8.0-mbstring php8.0-curl php8.0-xml php8.0-bcmath php8.0-gd php8.0-zip
+```
 
 
 ### Licensing & Copyright
