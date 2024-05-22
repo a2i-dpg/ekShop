@@ -607,7 +607,7 @@ if (!function_exists('my_asset')) {
         if (env('FILESYSTEM_DRIVER') == 's3') {
             return Storage::disk('s3')->url($path);
         } else {
-            return app('url')->asset('public/' . $path, $secure);
+            return app('url')->asset('/' . $path, $secure);
         }
     }
 }
@@ -622,7 +622,7 @@ if (!function_exists('static_asset')) {
      */
     function static_asset($path, $secure = null)
     {
-        return app('url')->asset('public/' . $path, $secure);
+        return app('url')->asset('/' . $path, $secure);
     }
 }
 
