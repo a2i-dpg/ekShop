@@ -651,7 +651,7 @@ if (!function_exists('getFileBaseURL')) {
         if (env('FILESYSTEM_DRIVER') == 's3') {
             return env('AWS_URL') . '/';
         } else {
-            return getBaseURL() . 'public/';
+            return getBaseURL() . '';
         }
     }
 }
